@@ -1,1 +1,1 @@
-status = MAIN version
+status = RESOLVED version
