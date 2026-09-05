@@ -1,0 +1,1 @@
+Checkout retry timeout: 30 seconds
