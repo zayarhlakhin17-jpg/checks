@@ -4,3 +4,5 @@ def service_status():
 SERVICE_NAME = "checkout"
 
 RETRY_LIMIT = 3
+
+REGION = "asia"
