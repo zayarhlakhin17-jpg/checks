@@ -6,10 +6,10 @@ An order was incorrectly rejected when the requested quantity was exactly equal 
 
 Example:
 
-Stock: 5  
+Stock: 5
 Order quantity: 5
 
-Expected: order allowed  
+Expected: order allowed
 Actual: order rejected
 
 ## How to reproduce
@@ -141,8 +141,3 @@ The lesson is to verify that every test has:
 an input,
 an expected result,
 an assertion comparing actual behavior with that expectation.
-
-Save it, then run:
-
-```bash
-git status --short
