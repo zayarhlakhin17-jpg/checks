@@ -1,4 +1,4 @@
 def service_status():
-	return "READY"
+	return "BROKEN"
 
 SERVICE_NAME = "checkout"
