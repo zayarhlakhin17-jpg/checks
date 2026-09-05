@@ -19,6 +19,7 @@ The original implementation was:
 ```python
 def can_fulfill_order(stock, quantity):
     return quantity < stock
+```
 
 The problem can be reproduced with:
 
@@ -36,19 +37,19 @@ def test_exact_stock_order_is_allowed(self):
 Before the fix, the test failed with:
 
 AssertionError: False != True
-Expected result
+## Expected result
 
 When stock is 5 and the customer orders exactly 5 units, the order should be allowed.
 
 Expected:
 
 True
-Actual result
+## Actual result
 
 The function returned:
 
 False
-Root cause
+## Root cause
 
 The implementation used the strict less-than operator:
 
@@ -64,7 +65,7 @@ False
 
 The business rule requires an order to be accepted when quantity is less than or equal to available stock.
 
-Fix
+## Fix
 
 The comparison was changed from:
 
@@ -81,7 +82,7 @@ Now:
 returns:
 
 True
-Regression tests
+## Regression tests
 
 Two inventory boundary cases are covered:
 
@@ -100,7 +101,7 @@ The full repository suite passed:
 
 Ran 6 tests
 OK
-Git workflow
+## Git workflow
 
 The work was completed on:
 
@@ -115,7 +116,7 @@ b9fb80a Add insufficient-stock regression coverage
 This preserves the development sequence:
 
 reproduce → fix → regression protection
-Process observations
+## Process observations
 
 A test must contain an assertion.
 
@@ -128,7 +129,7 @@ does not verify whether the returned value is correct.
 A proper regression test must assert the expected behavior, for example:
 
 self.assertFalse(can_fulfill_order(5, 6))
-Largest mistake + why it happened
+## Largest mistake + why it happened
 
 The largest mistake was creating a regression test that called the function without asserting its result.
 
