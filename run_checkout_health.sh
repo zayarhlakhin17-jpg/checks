@@ -1,2 +1,2 @@
 #!/bin/sh
-python-three -c 'print("checkout-health: OK")'
+python3 -c 'print("checkout-health: OK")'
