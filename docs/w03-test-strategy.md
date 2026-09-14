@@ -124,7 +124,7 @@ Command:
 
 Result:
 
-PASTE THE EXACT RESULT HERE.
+September 8 pre-change baseline: 7 tests ran in 0.046s and all passed (`OK`).
 
 Command:
 
@@ -132,7 +132,7 @@ Command:
 
 Result:
 
-PASTE THE EXACT RESULT HERE. If there was no output, record: no whitespace errors reported.
+No whitespace errors reported.
 
 ## Five failure cases
 
@@ -146,8 +146,8 @@ PASTE THE EXACT RESULT HERE. If there was no output, record: no whitespace error
 
 The typed CLI issue tracker was not found in the existing `checks` repository.
 
-This is an unresolved dependency for the planned full CI implementation.
+For September 8, Caroline authorized `checks` as the bounded W03 testing target. The full CI scope remains a planning dependency and is deferred for later reconciliation.
 
 ## Next decision
 
-Do not begin full CI implementation until the target project is confirmed.
+Proceed only with today's issue-linked inventory boundary test slice in `checks`; do not expand into full CI implementation.
