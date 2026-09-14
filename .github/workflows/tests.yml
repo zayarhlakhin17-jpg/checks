@@ -20,4 +20,4 @@ jobs:
 
       - name: Run unittest
         run: |
-          python3 -m unittest
+          python3 -m unittest discover -v
